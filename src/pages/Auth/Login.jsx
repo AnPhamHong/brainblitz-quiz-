@@ -1,7 +1,7 @@
 import imgExample from "../../assets/library.png";
-import svgCyber from "../../assets/Cyber.svg";
 import { SvgLoading } from "../../utils/svgIcons";
 import { useLoginForm } from "../../hooks/useLoginForm";
+import Logo from "../../components/Logo";
 
 function Login() {
   const {
@@ -70,12 +70,7 @@ function Login() {
         </div>
       </div>
       <div className="flex flex-col gap-8 p-8 flex-1 w-1/2">
-        <div className="flex gap-2 items-center h-fit ">
-          <div className="bg-blue-700 w-10 h-10 rounded-full flex items-center justify-center">
-            <img src={svgCyber} className="w8 h-8 text-white" />
-          </div>
-          <h2 className="font-bold text-blue-700 text-2xl">Cyberverdict</h2>
-        </div>
+       <Logo />
         <div className="lg:w-3/4 w-full h-full flex flex-col justify-center items-center mx-auto gap-4">
           <form
             onSubmit={handleLogin}

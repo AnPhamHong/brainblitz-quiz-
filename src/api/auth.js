@@ -22,3 +22,9 @@ export const friendlyFirebaseError = (code) => {
       return "Something went wrong. Please try again.";
   }
 };
+
+export const doSignOut = () => {
+    localStorage.removeItem("accessToken");
+    localStorage.removeItem("email");
+    window.location.href = "/login";
+};

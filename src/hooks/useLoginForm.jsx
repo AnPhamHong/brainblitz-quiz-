@@ -42,10 +42,12 @@ export const useLoginForm = () => {
       const user = userCredential.user;
       const token = await user.getIdToken();
       localStorage.setItem("accessToken", token);
+      localStorage.setItem("email", user.email);
       navigate("/");
     } catch (error) {
       setErrMessage(friendlyFirebaseError(error.message));
       localStorage.setItem("accessToken", "");
+      localStorage.setItem("email", "");
     } finally {
       setLoading(false);
     }
