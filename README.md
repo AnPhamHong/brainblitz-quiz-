@@ -7,7 +7,7 @@ A multi-page quiz web app built using **React**, **React Router**, **Tailwind CS
 - ⚛️ React (with Hooks)
 - ⚡ Vite (for blazing fast dev)
 - 🎨 Tailwind CSS
-- 🧭 React Router v7
+- 🧭 React Router v6
 - 🚀 Deploy: Netlify
 
 ## ✨ Features
@@ -22,7 +22,7 @@ A multi-page quiz web app built using **React**, **React Router**, **Tailwind CS
 
 ## 📸 Demo
 
-Live Site: [https://your-netlify-link.netlify.app](https://your-netlify-link.netlify.app)
+Live Site: [![Netlify Status](https://api.netlify.com/api/v1/badges/e3cd8ce1-49be-4a25-9047-f9320d6f74b0/deploy-status)](https://app.netlify.com/projects/jade-rabanadas-3fe661/deploys)
 
 ![screenshot](./screenshot.png) <!-- nếu bạn có ảnh -->
 
@@ -30,8 +30,8 @@ Live Site: [https://your-netlify-link.netlify.app](https://your-netlify-link.net
 
 ```bash
 # Clone the repo
-git clone https://github.com/yourusername/react-quiz-timer-app.git
-cd react-quiz-timer-app
+git clone https://github.com/yourusername/brainblitz-quiz-.git
+cd brainblitz-quiz-
 
 # Install dependencies
 npm install
