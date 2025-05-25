@@ -1,0 +1,20 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "admin@example.com",
+      "password": "123456",
+      "name": "Admin"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "Post title",
+      "content": "Lorem ipsum...",
+      "userId": 1
+    }
+  ],
+  "bookmarks": [],
+  "postLikes": []
+}
