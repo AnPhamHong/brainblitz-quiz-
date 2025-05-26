@@ -2,6 +2,9 @@
 
 A multi-page quiz web app built using **React**, **React Router**, **Tailwind CSS**, and **Vite**. Users can answer multiple-choice questions with a built-in countdown timer for each question.
 
+## Account login:
+Email: an.ph410@gmail.com
+Pass: admin1234
 ## 🔧 Tech Stack
 
 - ⚛️ React (with Hooks)
