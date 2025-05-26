@@ -5,7 +5,7 @@ function Header() {
   return (
     <div class="flex w-full gap-4 py-4 px-8 justify-between items-center  bg-gradient-to-r from-blue-100 via-purple-100 to-pink-100 text-center shadow-md">
       <div className="flex gap-1 items-center">
-        <p class="text-sm  font-semibold text-gray-800 italic relative">
+        <p class="ml-10 lg:ml-0 text-sm  font-semibold text-gray-800 italic relative">
           <span class="before:absolute before:-left-3 before:top-1/2 before:-translate-y-1/2 before:text-sm before:text-purple-400">
             “
           </span>
@@ -23,7 +23,7 @@ function Header() {
       <div className="flex items-center gap-4 justify-end">
         <button
           type="button"
-          className="w-fit h-[38px] flex items-center justify-center gap-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 disabled:cursor-not-allowed"
+          className="hidden lg:flex w-fit h-[38px] items-center justify-center gap-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 disabled:cursor-not-allowed"
         >
           Start Quiz
         </button>

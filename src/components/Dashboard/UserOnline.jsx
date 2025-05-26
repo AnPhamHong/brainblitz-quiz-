@@ -15,7 +15,7 @@ function UserOnline() {
     <div className="flex gap-4 flex-col">
       <h2 className="text-blue-700 font-bold text-base">Other Users Online</h2>
 
-      <div className="flex gap-2 flex-wrap justify-between">
+      <div className="flex gap-2 flex-wrap justify-center lg:justify-between">
         {[
           User1,
           User2,

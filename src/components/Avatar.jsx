@@ -29,7 +29,7 @@ function Avatar() {
         type="button"
         data-dropdown-toggle="userDropdown"
         data-dropdown-placement="bottom-start"
-        className="w-[38px] h-[38px] rounded-full cursor-pointer"
+        className="w-[38px] h-[38px] object-cover rounded-full cursor-pointer"
         src="https://images.unsplash.com/photo-1457449940276-e8deed18bfff?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         alt="User dropdown"
         onClick={handleToggle}

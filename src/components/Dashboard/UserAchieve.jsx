@@ -7,14 +7,14 @@ function UserAchieve() {
     const achieveMap = { 0: "Comeback", 1: "Winner", 2: "Lucky" };
      return (
        <div className="flex gap-4 flex-col">
-         <div className="flex justify-between items-center mb-4">
+         <div className="flex flex-nowrap lg:flex-wrap justify-between items-center mb-4">
            <h2 className="text-base font-bold text-blue-800">Achievements</h2>
            <a href="#" className="text-sm text-blue-600 hover:underline">
              View All
            </a>
          </div>
    
-         <div className="flex gap-2 justify-between">
+         <div className="flex gap-2 flex-nowrap lg:flex-wrap justify-center">
            {[Achieve1, Achieve2, Achieve3].map((item, index) => {
              return (
                <div

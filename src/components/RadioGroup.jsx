@@ -1,4 +1,3 @@
-import React from "react";
 import PropTypes from "prop-types";
 
 const RadioGroup = ({ options, selected, onChange, name }) => {
@@ -24,7 +23,7 @@ const RadioGroup = ({ options, selected, onChange, name }) => {
             className={`relative w-5 h-5 rounded-full border-2 border-gray-400 flex items-center justify-center 
               peer-checked:border-blue-500 peer-disabled:border-gray-300`}
           ></div>
-          <div className="absolute left-[6px] scale-0 w-2.5 h-2.5 rounded-full bg-blue-500 peer-checked:scale-100 transition-transform" />
+          <div className="absolute left-0 translate-x-1/2 scale-0 w-2.5 h-2.5 rounded-full bg-blue-500 peer-checked:scale-100 transition-transform" />
 
           <span className="text-gray-700 text-sm font-medium">
             {option.label}

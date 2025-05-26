@@ -25,7 +25,7 @@ function UserLog() {
         <div className="flex gap-4 flex-col">
           <h2 className="text-base font-bold text-blue-800">Reminders</h2>
     
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-row gap-4 lg:flex-col lg:gap-2">
             {logs.map((log, index) => {
               return (
                 <div className="flex gap-2 items-center" key={`logs-${index}`}>

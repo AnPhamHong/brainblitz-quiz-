@@ -34,7 +34,7 @@ function StatBox({ icon, value, label }) {
 
 function UIAchieve() {
   return (
-    <div className="flex gap-8 mt-4">
+    <div className="flex flex-wrap gap-4 mt-4">
       <StatBox icon={svgFlag} value={27} label={"Quiz Passed"} />
       <StatBox icon={svgCircle} value={"27min"} label={"Fastest Time"} />
       <StatBox icon={svgVector} value={200} label={"Correct Answers"} />
@@ -71,9 +71,9 @@ export default function Home() {
   // }, []);
 
   return (
-    <div className="flex w-full gap-4 px-4">
-      <div className="flex-[4] bg-white shadow-lg p-6 rounded-lg">
-        <div className="flex gap-8 h-48">
+    <div className="flex flex-col lg:flex-row w-full gap-4 px-4">
+      <div className="lg:flex-[4] bg-white shadow-lg p-6 rounded-lg">
+        <div className="flex gap-8">
           <img
             className="w-44 h-48 rounded-lg object-cover"
             src="https://images.unsplash.com/photo-1457449940276-e8deed18bfff?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"

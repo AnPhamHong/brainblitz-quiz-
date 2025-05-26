@@ -13,6 +13,7 @@ import Login from "./pages/Auth/Login";
 import { useEffect } from "react";
 import Sidebar from "./components/Sidebar";
 import Header from "./components/Header";
+import ComingSoon from "./components/ComingSoon";
 
 function ProtectedLayout() {
   const token = localStorage.getItem("accessToken");
@@ -36,22 +37,24 @@ function App() {
   const navigate = useNavigate();
   const location = useLocation();
 
-  useEffect(() => {
+   useEffect(() => {
     const token = localStorage.getItem("accessToken");
-    if (!token) {
-      navigate("/login");
-    } else if (location.pathname === "/login") {
-      navigate("/");
+
+    if (!token && location.pathname !== "/login") {
+      navigate("/login", { replace: true });
+    } else if (token && location.pathname === "/login") {
+      navigate("/", { replace: true });
     }
-  }, [navigate, location]);
+  }, [navigate, location.pathname]);
+
   return (
     <Routes>
       <Route element={<ProtectedLayout />}>
         <Route path="/" element={<Home />} />
         <Route path="/quiz/:quizId/:level_difficult/:quizCategory" element={<Quiz />} />
-        <Route path="/notification" element={<Quiz />} />
-        <Route path="/achievements" element={<Quiz />} />
-        <Route path="/quiz-history" element={<Quiz />} />
+        <Route path="/notification" element={<ComingSoon />} />
+        <Route path="/achievements" element={<ComingSoon />} />
+        <Route path="/quiz-history" element={<ComingSoon />} />
       </Route>
       <Route path="/login" element={<Login />} />
     </Routes>
