@@ -19,7 +19,7 @@ function decodeHTMLEntities(text) {
 // Fetch và thêm quiz
 export async function fetchAndSaveQuiz() {
   const response = await axios.get(
-    `https://opentdb.com/api.php?amount=50&category=30&difficulty=medium`
+    `https://opentdb.com/api.php?amount=10&category=25&difficulty=medium`
   );
   console.log(response);
   const { data } = response;

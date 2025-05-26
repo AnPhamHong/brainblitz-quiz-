@@ -1,4 +1,4 @@
-import bannerSupport from "../assets/banner-start-quiz.svg";
+import bannerSupport from "../assets/svgs/banner-start-quiz.svg";
 import {
   Bell,
   History,

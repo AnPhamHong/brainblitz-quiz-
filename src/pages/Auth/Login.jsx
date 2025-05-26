@@ -1,4 +1,4 @@
-import imgExample from "../../assets/library.png";
+import imgExample from "../../assets/images/library.png";
 import { SvgLoading } from "../../utils/svgIcons";
 import { useLoginForm } from "../../hooks/useLoginForm";
 import Logo from "../../components/Logo";
