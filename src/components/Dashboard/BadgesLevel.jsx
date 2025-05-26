@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const BadgesLevel = ({ level }) => {
+const BadgesLevel = ({ level, isOnlyLevel }) => {
   const timeMap = { easy: "15min", medium: "25min", hard: "45min" };
 
   const levelClass = {
@@ -13,9 +13,11 @@ const BadgesLevel = ({ level }) => {
 
   return (
     <>
-      <span className="bg-blue-100 text-blue-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded-md dark:bg-blue-900 dark:text-blue-300">
-        {timeMap[level]}
-      </span>
+      {!!isOnlyLevel && (
+        <span className="bg-blue-100 text-blue-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded-md dark:bg-blue-900 dark:text-blue-300">
+          {timeMap[level]}
+        </span>
+      )}
 
       <span
         className={`capitalize text-sm font-medium me-2 px-2.5 py-0.5 rounded-md ${levelClass[level]}`}
@@ -27,7 +29,8 @@ const BadgesLevel = ({ level }) => {
 };
 
 BadgesLevel.propTypes = {
-  level: PropTypes.oneOf(['easy', 'medium', 'hard']).isRequired,
+  level: PropTypes.oneOf(["easy", "medium", "hard"]).isRequired,
+  isOnlyLevel: PropTypes.bool,
 };
 
 export default React.memo(BadgesLevel);

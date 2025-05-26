@@ -21,6 +21,12 @@ html {
   font-size: 18px;
 }
 
+
+main {
+  scrollbar-width: thin;
+  scrollbar-color: #242424 #f0f0f0;
+}
+
 a {
   font-weight: 500;
   color: #646cff;

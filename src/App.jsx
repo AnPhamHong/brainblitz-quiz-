@@ -48,7 +48,7 @@ function App() {
     <Routes>
       <Route element={<ProtectedLayout />}>
         <Route path="/" element={<Home />} />
-        <Route path="/quiz" element={<Quiz />} />
+        <Route path="/quiz/:quizId/:level_difficult/:quizCategory" element={<Quiz />} />
         <Route path="/notification" element={<Quiz />} />
         <Route path="/achievements" element={<Quiz />} />
         <Route path="/quiz-history" element={<Quiz />} />

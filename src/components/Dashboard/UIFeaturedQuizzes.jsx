@@ -1,8 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 import BadgesLevel from "./BadgesLevel";
+import { useNavigate } from "react-router-dom";
 
 const UIFeaturedQuizzes = ({ quizzes }) => {
+  const navigate = useNavigate();
   return (
     <div className="mt-6">
       <div className="flex justify-between items-center mb-4">
@@ -17,6 +19,7 @@ const UIFeaturedQuizzes = ({ quizzes }) => {
           <div
             key={quiz.id}
             className="relative rounded-lg overflow-hidden shadow-md hover:scale-[1.02] transition-transform duration-300"
+            onClick={() => navigate(`/quiz/${quiz.id}/${quiz.level_difficult}/${quiz.category}`)}
           >
             <img
               src={quiz.image}
