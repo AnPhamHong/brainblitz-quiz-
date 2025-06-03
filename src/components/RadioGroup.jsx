@@ -1,7 +1,6 @@
 import PropTypes from "prop-types";
 
 const RadioGroup = ({ options, selected, onChange, name }) => {
-  console.log(selected);
   return (
     <div className="flex flex-col gap-3" role="radiogroup" aria-label={name}>
       {options.map((option) => (

@@ -5,9 +5,11 @@ import RadioGroup from "@components/RadioGroup";
 import QuizHeader from "@components/Quiz/QuizHeader";
 import { cloneDeep, fill, filter, shuffle } from "lodash";
 import { calculateTotalScore, generateDataQuiz } from "@utils/utils";
-import { IntroQuizz, ModalConfirmSubmit, Result } from "@components/Quiz";
+import { ModalConfirmSubmit, Result } from "@components/Quiz";
 import { TestStep } from "@enums";
 import { SvgLoading } from "@utils/svgIcons";
+import { Rules } from "@components/Quiz";
+import BackToTop from "@components/BackToTop";
 
 function Quiz() {
   const { level_difficult, quizCategory } = useParams();
@@ -126,57 +128,65 @@ function Quiz() {
   };
 
   return (
-    <div className="xl:max-w-4xl max-w-full mx-auto py-6 px-4 sm:px-6 lg:px-8">
-      {step === TestStep.RULES ? (
-        <div className="relative shadow-md sm:rounded-lg">
-          <IntroQuizz onStart={() => setStep(TestStep.DO_QUIZ)} />
-        </div>
-      ) : step === TestStep.DO_QUIZ ? (
-        <div className="shadow-md sm:rounded-lg bg-white p-6">
-          <QuizHeader
-            image={quizList?.image ?? ""}
-            category={quizList?.category ?? ""}
-            level_difficult={quizList?.level_difficult ?? ""}
-            total_quiz={quizList?.lst_quiz?.length ?? 0}
-          />
-          {quizList?.lst_quiz?.length ? (
-            <>
-              {renderQuestions(quizList.lst_quiz)}
-              <div className="w-full flex items-center justify-center">
-                <button
-                  disabled={loading || qDone === 0}
-                  type="submit"
-                  onClick={() => onHandleSubmit()}
-                  className="mt-4 flex items-center justify-center gap-2 text-white bg-sky-700 hover:bg-sky-800 focus:ring-4 focus:outline-none focus:ring-sky-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-sky-600 dark:hover:bg-sky-700 dark:focus:ring-sky-800 disabled:cursor-not-allowed"
-                >
-                  {loading && (
-                    <SvgLoading
-                      role="status"
-                      ariaLabel="Loading"
-                      className="animate-spin h-5 w-5 text-white"
-                    />
-                  )}
-                  {loading ? "Loading..." : "Submit"}
-                </button>
-              </div>
-            </>
-          ) : (
-            <p>No questions available.</p>
-          )}
-        </div>
-      ) : (
-        <div className="relative shadow-md sm:rounded-lg">
-          <Result detailScore={detailScore} />
-        </div>
-      )}
-      <ModalConfirmSubmit
-        stateOpen={isOpenConfirm}
-        onOk={onHandleScore}
-        onCancel={() => setIsOpenConfirm(false)}
-        qDone={qDone}
-        qTotal={!quizList || !quizList.lst_quiz ? 0 : quizList.lst_quiz?.length}
-      />
-    </div>
+    <>
+      <div className="xl:max-w-4xl max-w-full mx-auto py-6 px-4 sm:px-6 lg:px-8 no-select">
+        {step === TestStep.RULES ? (
+          <div className="relative shadow-md sm:rounded-lg">
+            <Rules
+              onStart={() => setStep(TestStep.DO_QUIZ)}
+              level={level_difficult}
+            />
+          </div>
+        ) : step === TestStep.DO_QUIZ ? (
+          <div className="shadow-md sm:rounded-lg bg-white p-6">
+            <QuizHeader
+              image={quizList?.image ?? ""}
+              category={quizList?.category ?? ""}
+              level_difficult={quizList?.level_difficult ?? ""}
+              total_quiz={quizList?.lst_quiz?.length ?? 0}
+            />
+            {quizList?.lst_quiz?.length ? (
+              <>
+                {renderQuestions(quizList.lst_quiz)}
+                <div className="w-full flex items-center justify-center">
+                  <button
+                    disabled={loading || qDone === 0}
+                    type="submit"
+                    onClick={() => onHandleSubmit()}
+                    className="mt-4 flex items-center justify-center gap-2 text-white bg-sky-700 hover:bg-sky-800 focus:ring-4 focus:outline-none focus:ring-sky-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-sky-600 dark:hover:bg-sky-700 dark:focus:ring-sky-800 disabled:cursor-not-allowed"
+                  >
+                    {loading && (
+                      <SvgLoading
+                        role="status"
+                        ariaLabel="Loading"
+                        className="animate-spin h-5 w-5 text-white"
+                      />
+                    )}
+                    {loading ? "Loading..." : "Submit"}
+                  </button>
+                </div>
+              </>
+            ) : (
+              <p>No questions available.</p>
+            )}
+          </div>
+        ) : (
+          <div className="relative shadow-md sm:rounded-lg">
+            <Result detailScore={detailScore} />
+          </div>
+        )}
+        <ModalConfirmSubmit
+          stateOpen={isOpenConfirm}
+          onOk={onHandleScore}
+          onCancel={() => setIsOpenConfirm(false)}
+          qDone={qDone}
+          qTotal={
+            !quizList || !quizList.lst_quiz ? 0 : quizList.lst_quiz?.length
+          }
+        />
+      </div>
+      <BackToTop />
+    </>
   );
 }
 

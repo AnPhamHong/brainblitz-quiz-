@@ -6,8 +6,9 @@ import {
   X,
 } from "lucide-react";
 import { useState } from "react";
+import { getTimeByDifficulty } from "@utils/getTimeByDifficulty";
 
-function IntroQuizz(props) {
+function Rules(props) {
   const [isCheck, setIsCheck] = useState(false);
 
   return (
@@ -21,7 +22,7 @@ function IntroQuizz(props) {
             <Clock1 size={20} color="#4e687e" /> Duration
           </th>
           <td className="px-6 py-8 text-justify">
-            48 minutes (You can pause the test between questions; You cannot
+            {getTimeByDifficulty(props.level)} minutes (You can pause the test between questions; You cannot
             return to previous questions)
           </td>
         </tr>
@@ -72,7 +73,7 @@ function IntroQuizz(props) {
             <Signature size={20} color="#4e687e" /> Legal
           </th>
           <td className="px-6 py-8 text-justify">
-            <div className="flex items-start">
+            <div className="flex items-start cursor-pointer">
               <div className="flex items-center h-5">
                 <input
                   id="remember"
@@ -85,7 +86,7 @@ function IntroQuizz(props) {
               </div>
               <label
                 htmlFor="remember"
-                className="ms-2 text-sm text-gray-500 dark:text-gray-300"
+                className="ms-2 text-sm text-gray-500 dark:text-gray-300 cursor-pointer"
               >
                 I have read all of the above and I agree with the terms of use
                 and the privacy policy .
@@ -108,4 +109,4 @@ function IntroQuizz(props) {
   );
 }
 
-export default IntroQuizz;
+export default Rules;

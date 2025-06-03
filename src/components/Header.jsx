@@ -3,19 +3,19 @@ import Avatar from "./Avatar";
 
 function Header() {
   return (
-    <div class="flex w-full gap-4 py-4 px-8 justify-between items-center  bg-gradient-to-r from-blue-100 via-purple-100 to-pink-100 text-center shadow-md">
+    <div className="flex w-full gap-4 py-4 px-8 justify-between items-center  bg-gradient-to-r from-blue-100 via-purple-100 to-pink-100 text-center shadow-md">
       <div className="flex gap-1 items-center">
-        <p class="ml-10 lg:ml-0 text-sm  font-semibold text-gray-800 italic relative">
-          <span class="before:absolute before:-left-3 before:top-1/2 before:-translate-y-1/2 before:text-sm before:text-purple-400">
+        <p className="ml-10 lg:ml-0 text-sm  font-semibold text-gray-800 italic relative">
+          <span className="before:absolute before:-left-3 before:top-1/2 before:-translate-y-1/2 before:text-sm before:text-purple-400">
             “
           </span>
           The beautiful thing about learning is that nobody can take it away
           from you.
-          <span class="after:absolute after:-right-3 after:top-1/2 after:-translate-y-1/2 after:text-sm after:text-purple-400">
+          <span className="after:absolute after:-right-3 after:top-1/2 after:-translate-y-1/2 after:text-sm after:text-purple-400">
             ”
           </span>
         </p>
-        <p class="text-sm text-gray-500 font-medium flex items-center gap-1 justify-end ml-2">
+        <p className="text-sm text-gray-500 font-medium flex items-center gap-1 justify-end ml-2">
           <Fan size={12} />
           B.B.King <Fan size={12} />
         </p>

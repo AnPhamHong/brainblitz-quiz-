@@ -21,11 +21,10 @@ html {
   font-size: 18px;
 }
 
-
-main {
+/* main {
   scrollbar-width: thin;
   scrollbar-color: #242424 #f0f0f0;
-}
+} */
 
 a {
   font-weight: 500;
@@ -40,7 +39,7 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  background-color: #FAF8F8;
+  background-color: #faf8f8;
 }
 
 h1 {
@@ -70,7 +69,7 @@ button:focus-visible {
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
-    background-color: #FAF8F8;
+    background-color: #faf8f8;
   }
   a:hover {
     color: #747bff;
@@ -88,19 +87,57 @@ button:focus-visible {
 
 @media (max-width: 1024px) {
   html {
-    font-size: 14px; 
+    font-size: 14px;
   }
 }
 
-
 @media (max-width: 1280px) {
   html {
-    font-size: 16px; 
+    font-size: 16px;
   }
 }
 
 @media (max-width: 768px) {
   html {
-    font-size: 14px; 
+    font-size: 14px;
   }
+}
+
+.no-select {
+  user-select: none; /* Default */
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE/Edge cũ */
+}
+
+.backToTop {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  font-size: 1.5rem;
+  background-color: #437dad;
+  color: #fff;
+  border: none;
+  border-radius: 1rem;
+  opacity: 0;
+  cursor: pointer;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 999;
+  transform: scale(0.8);
+  width: 50px;
+  height: 50px;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.backToTop:hover {
+  background-color: #365f8b;
+  transform: scale(1);
+}
+
+.show {
+  opacity: 1;
+  transform: scale(1);
 }

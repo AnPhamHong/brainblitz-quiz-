@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { getTimeByDifficulty } from "@utils/getTimeByDifficulty";
 
 const BadgesLevel = ({ level, isOnlyLevel }) => {
-  const timeMap = { easy: "15min", medium: "25min", hard: "45min" };
 
   const levelClass = {
     easy: "bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300",
@@ -15,7 +15,7 @@ const BadgesLevel = ({ level, isOnlyLevel }) => {
     <>
       {!!isOnlyLevel && (
         <span className="bg-blue-100 text-blue-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded-md dark:bg-blue-900 dark:text-blue-300">
-          {timeMap[level]}
+          {getTimeByDifficulty(level)}min
         </span>
       )}
 
