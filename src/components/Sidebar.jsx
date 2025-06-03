@@ -1,5 +1,5 @@
 import { useState } from "react";
-import bannerSupport from "../assets/svgs/banner-start-quiz.svg";
+import bannerSupport from "@assets/svgs/banner-start-quiz.svg";
 import {
   Bell,
   History,
@@ -12,7 +12,7 @@ import {
 import { NavLink } from "react-router-dom";
 import clsx from "clsx";
 import Logo from "./Logo";
-import { doSignOut } from "../api/auth";
+import { doSignOut } from "@api/auth";
 
 function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);

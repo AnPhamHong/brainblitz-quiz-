@@ -1,12 +1,11 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { validateLoginForm } from "../validators/loginValidator";
+import { validateLoginForm } from "@validators/loginValidator";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../firebase";
-import { friendlyFirebaseError } from "../api/auth";
+import { friendlyFirebaseError } from "@api/auth";
 
-
-export const useLoginForm = () => {
+export default  function useLoginForm() {
   const [formUser, setFormUser] = useState({
     email: "",
     password: "",
@@ -38,7 +37,11 @@ export const useLoginForm = () => {
 
     setLoading(true);
     try {
-      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+      const userCredential = await signInWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
       const user = userCredential.user;
       const token = await user.getIdToken();
       localStorage.setItem("accessToken", token);
@@ -61,4 +64,4 @@ export const useLoginForm = () => {
     handleLogin,
     handleChangeForm,
   };
-};
+}

@@ -1,7 +1,7 @@
-import imgExample from "../../assets/images/library.png";
-import { SvgLoading } from "../../utils/svgIcons";
-import { useLoginForm } from "../../hooks/useLoginForm";
-import Logo from "../../components/Logo";
+import imgExample from "@assets/images/library.png";
+import { SvgLoading } from "@utils/svgIcons";
+import Logo from "@components/Logo";
+import useLoginForm from "@hooks/useLoginForm";
 
 function Login() {
   const {

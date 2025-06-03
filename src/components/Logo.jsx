@@ -1,4 +1,4 @@
-import svgCyber from "../assets/svgs/Cyber.svg";
+import svgCyber from "@assets/svgs/Cyber.svg";
 
 function Logo() {
   return (

@@ -7,13 +7,13 @@ import {
   Outlet,
   useLocation,
 } from "react-router-dom";
-import Home from "./pages/Home";
-import Quiz from "./pages/Quiz";
-import Login from "./pages/Auth/Login";
+import Home from "@pages/Home";
+import Quiz from "@pages/Quiz";
+import Login from "@pages/Auth/Login";
 import { useEffect } from "react";
-import Sidebar from "./components/Sidebar";
-import Header from "./components/Header";
-import ComingSoon from "./components/ComingSoon";
+import Sidebar from "@components/Sidebar";
+import Header from "@components/Header";
+import ComingSoon from "@components/ComingSoon";
 
 function ProtectedLayout() {
   const token = localStorage.getItem("accessToken");

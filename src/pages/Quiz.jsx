@@ -1,13 +1,13 @@
 import { useEffect, useMemo, useState } from "react";
 import { useParams } from "react-router-dom";
-import fetchQuizzesByCategory from "../api/fetchQuizzesByCategory";
-import RadioGroup from "../components/RadioGroup";
-import QuizHeader from "../components/Quiz/QuizHeader";
+import fetchQuizzesByCategory from "@api/fetchQuizzesByCategory";
+import RadioGroup from "@components/RadioGroup";
+import QuizHeader from "@components/Quiz/QuizHeader";
 import { cloneDeep, fill, filter, shuffle } from "lodash";
-import { calculateTotalScore, generateDataQuiz } from "../utils/utils";
-import { IntroQuizz, ModalConfirmSubmit, Result } from "../components/Quiz";
-import { TestStep } from "../enums";
-import { SvgLoading } from "../utils/svgIcons";
+import { calculateTotalScore, generateDataQuiz } from "@utils/utils";
+import { IntroQuizz, ModalConfirmSubmit, Result } from "@components/Quiz";
+import { TestStep } from "@enums";
+import { SvgLoading } from "@utils/svgIcons";
 
 function Quiz() {
   const { level_difficult, quizCategory } = useParams();

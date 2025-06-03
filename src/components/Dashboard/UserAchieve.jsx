@@ -1,6 +1,6 @@
-import Achieve1 from "../../assets/svgs/achieve-1.svg";
-import Achieve2 from "../../assets/svgs/achieve-2.svg";
-import Achieve3 from "../../assets/svgs/achieve-3.svg";
+import Achieve1 from "@assets/svgs/achieve-1.svg";
+import Achieve2 from "@assets/svgs/achieve-2.svg";
+import Achieve3 from "@assets/svgs/achieve-3.svg";
 
 
 function UserAchieve() {

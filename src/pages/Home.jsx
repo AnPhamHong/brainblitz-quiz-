@@ -3,7 +3,7 @@ import {
   useEffect,
   useState,
 } from "react";
-import { getFeatQuizzes } from "../api/getQuizData";
+import { getFeatQuizzes } from "@api/getQuizData";
 import {
   Skeleton,
   UIFeaturedQuizzes,
@@ -11,12 +11,12 @@ import {
   UserAchieve,
   UserLog,
   UserOnline,
-} from "../components/Dashboard";
+} from "@components/Dashboard";
 // import { updateHasQuizField } from "../api/updateQuizes";
 // import { fetchAndSaveQuiz } from "../api/generateQuizes";
-import svgFlag from "../assets/svgs/flag-filled.svg";
-import svgCircle from "../assets/svgs/circle-check-fill.svg";
-import svgVector from "../assets/svgs/vector.svg";
+import svgFlag from "@assets/svgs/flag-filled.svg";
+import svgCircle from "@assets/svgs/circle-check-fill.svg";
+import svgVector from "@assets/svgs/vector.svg";
 
 function StatBox({ icon, value, label }) {
   return (

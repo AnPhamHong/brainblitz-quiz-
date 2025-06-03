@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { doSignOut } from "../api/auth";
+import { doSignOut } from "@api/auth";
 
 function Avatar() {
   const [isOpen, setIsOpen] = useState(false);

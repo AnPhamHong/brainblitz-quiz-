@@ -1,4 +1,4 @@
-import svgComingSoon from "../assets/svgs/undraw_skateboard_w3bz.svg";
+import svgComingSoon from "@assets/svgs/undraw_skateboard_w3bz.svg";
 
 export default function ComingSoon() {
   return (

@@ -1,14 +1,14 @@
 
 import clsx from "clsx";
-import User1 from "../../assets/images/user-1.png";
-import User2 from "../../assets/images/user-2.png";
-import User3 from "../../assets/images/user-3.png";
-import User4 from "../../assets/images/user-4.png";
-import User5 from "../../assets/images/user-5.png";
-import User6 from "../../assets/images/user-6.png";
-import User7 from "../../assets/images/user-7.png";
-import User8 from "../../assets/images/user-8.png";
-import User9 from "../../assets/images/user-9.png";
+import User1 from "@assets/images/user-1.png";
+import User2 from "@assets/images/user-2.png";
+import User3 from "@assets/images/user-3.png";
+import User4 from "@assets/images/user-4.png";
+import User5 from "@assets/images/user-5.png";
+import User6 from "@assets/images/user-6.png";
+import User7 from "@assets/images/user-7.png";
+import User8 from "@assets/images/user-8.png";
+import User9 from "@assets/images/user-9.png";
 
 function UserOnline() {
      return (
