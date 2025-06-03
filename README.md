@@ -2,6 +2,9 @@
 
 A multi-page quiz web app built using **React**, **React Router**, **Tailwind CSS**, and **Vite**. Users can answer multiple-choice questions with a built-in countdown timer for each question.
 
+## Account login:
+Email: an.ph410@gmail.com
+Pass: admin1234
 ## 🔧 Tech Stack
 
 - ⚛️ React (with Hooks)
@@ -22,9 +25,7 @@ A multi-page quiz web app built using **React**, **React Router**, **Tailwind CS
 
 ## 📸 Demo
 
-Live Site: [![Netlify Status](https://api.netlify.com/api/v1/badges/e3cd8ce1-49be-4a25-9047-f9320d6f74b0/deploy-status)](https://app.netlify.com/projects/jade-rabanadas-3fe661/deploys)
-
-![screenshot](./screenshot.png) <!-- nếu bạn có ảnh -->
+Live Site: [[![Netlify Status](https://api.netlify.com/api/v1/badges/e3cd8ce1-49be-4a25-9047-f9320d6f74b0/deploy-status)](https://app.netlify.com/projects/jade-rabanadas-3fe661/deploys)](https://brainblitz-quiz-3fe661.netlify.app/)
 
 ## 🚀 Getting Started
 
